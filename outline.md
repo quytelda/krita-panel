@@ -1,0 +1,55 @@
+- User Interface
+  - Tools
+  - Toolbars
+	- Painter's Tools
+	- Sliders
+  - Dockers
+  - Configurable Settings
+	- Note: Shortcuts v. Canvas Input Settings
+  - Canvas-only mode
+  - Pop-up palette
+  - Rulers & Guides
+- Resources
+  - Patterns
+  - Presets
+  - Bundles
+  - Vector Shapes
+- Layers & Masks
+  - Types of Layers
+	- Paint layers
+	- Group layers
+	- Fill layers
+	- Filter layers
+	- Vector layers
+	- Clone layer
+	- File layer
+	- Transparency Masks
+  - Compositing
+	- Alpha Inheritance
+- Brushes
+  - Eraser Mode
+	- Krita has no eraser tool. Toggle eraser mode 'E' to erase with a brush
+  - Brush Engines
+	- Pixel
+	- Color Smudge
+	- Spray?
+  - Brush settings
+    - Reset, Save, or Copy brush settings
+- Selections
+  - Selection tools
+  - Local selections
+  - Global selections
+- Painting Assistants
+  - Rulers
+  - Ellipses
+  - Perspective & Vanishing Point
+  - Snap to assistants
+- Vector Tools
+- Tips & Tricks
+  - Use '/' to toggle between the two most recently used brushes
+  - You can save a color palettes inside an image file.
+  - Use the "ten brushes" script to add shortcuts for commonly used presets
+  - Use colorize masks to automate coloring line art.
+  - *.kra and *.bundle files are actually just Zip archives
+  - Use the mirror tools or multibrush tool to create symmetric images
+  - Use wrap around mode to create tiling images
