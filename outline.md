@@ -1,19 +1,30 @@
 - User Interface
-  - Tools
+  - Toolbox
+	- The toolbox allows you to select between editing tools such as the paintbrush, color picker, selection tools, etc.
   - Toolbars
 	- Painter's Tools
+		- The brush settings dialog can be accessed via the "Edit brush settings" button in the the toolbar.
 	- Sliders
+		- The toolbar contains sliders for controlling common brush properties like size and opacity without opening the brush settings editor. You can customize these sliders to show several other properties as well.
   - Dockers
+	- Dockers are small modular windows that contain groups of related controls.
+	- Dockers can be free-floating or docked and stacked with tabs. Click and drag the titlebar to move it around.
   - Configurable Settings
-	- Note: Shortcuts v. Canvas Input Settings
+	- Note: Shortcuts and Canvas Input Settings are managed separately in Krita.
   - Canvas-only mode
+	- Press tab to hide distractions and press tab again to return to normal.
+	- You can configure what things are hidden in Canvas-only mode.
   - Pop-up palette
   - Rulers & Guides
-- Resources
-  - Patterns
-  - Presets
-  - Bundles
-  - Vector Shapes
+- Brushes
+  - Eraser Mode
+	- Krita has no eraser tool. Toggle eraser mode 'E' to erase with a brush
+  - Brush Engines
+	- Pixel
+	- Color Smudge
+	- Spray
+  - Brush settings
+    - Reset, Save, or Copy brush settings
 - Layers & Masks
   - Types of Layers
 	- Paint layers
@@ -26,15 +37,6 @@
 	- Transparency Masks
   - Compositing
 	- Alpha Inheritance
-- Brushes
-  - Eraser Mode
-	- Krita has no eraser tool. Toggle eraser mode 'E' to erase with a brush
-  - Brush Engines
-	- Pixel
-	- Color Smudge
-	- Spray?
-  - Brush settings
-    - Reset, Save, or Copy brush settings
 - Selections
   - Selection tools
   - Local selections
@@ -44,6 +46,11 @@
   - Ellipses
   - Perspective & Vanishing Point
   - Snap to assistants
+- Resources
+  - Patterns
+  - Presets
+  - Bundles
+  - Vector Shapes
 - Vector Tools
 - Tips & Tricks
   - Use '/' to toggle between the two most recently used brushes
@@ -53,3 +60,19 @@
   - *.kra and *.bundle files are actually just Zip archives
   - Use the mirror tools or multibrush tool to create symmetric images
   - Use wrap around mode to create tiling images
+  - Use XNOR to get sketches to show up on top of artwork.
+  - Weird aliasing with Quick brush engine can be fixed by using different brush.
+  - Zoom out to expand the canvas
+  - Restart after adding resources
+  - Clear hidden selections if you can't paint
+  - You can't paint on group layers
+- Resources
+  - Help
+	- Documentation: docs.krita.org
+	- Krita Artists Forum
+	- IRC & Matrix rooms
+	- Krita YouTube channel
+  - Brushes, Patterns, etc.
+	- David Revoy's website [https://www.davidrevoy.com] has excellent free bundles
+	- Ramón Miranda has created lots of great bundles at [https://files.kde.org/krita/extras]
+	- [https://opengameart.org] has some good tiling textures with open licenses
