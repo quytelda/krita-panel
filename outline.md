@@ -13,12 +13,10 @@ options like the current foreground and background colors.
 
 ## Dockers
 
-Dockers are small modular windows that contain groups of related
-controls. They can be free-floating or docked and stacked with tabs.
+There's quite a few dockers available for use that can be toggled on
+and off in the `Settings -> Dockers` menu.
 
-Click and drag the titlebar to move them around. There's quite a few
-dockers available for use that can be toggled on and off in the
-`Settings -> Dockers` menu.
+Point out the most important dockers: Tool Options, Layers
 
 ## Pop-up palette
 
@@ -44,6 +42,20 @@ Krita configuration options.
 Click on a ruler and drag toward the canvas to create a guide. Remove
 guides by dragging them back.
 
+# Settings and Configuration
+
+Krita has lots of settings, so we won't talk about all of them. But
+let me just point out a few important ones:
+
+- If you're looking to map buttons on your tablet/stylus to specific
+  actions, you'll probably want to take a look at the canvas input
+  settings.
+- If you're doing pixel art, you may find it useful to change the zoom
+  level where the pixel grid appears: `Display -> Canvas Decorations
+  -> Pixel Grid`.
+- Check out the `Python Plugin Manager` if you want to use Python
+  plugins.
+
 # Brushes
 
 ## Erasing
@@ -62,17 +74,31 @@ preset for each tool independantly.
 
 ## Brush Engines
 
-Krita has multiple brush engines that paint in different ways and can
-be used to achieve different types of specialized effects.
+You'll find this is something of a pattern in Krita - tools that
+behave like brushes are usually implemented as brushes. Another
+example is the clone brush, which paints by copying pixels from
+elsewhere in the image.
+
+This flexibility is achieved by having multiple brush engines that
+paint in different ways and can be used to achieve different types of
+specialized effects.
+
+Example: First sketch a heart shape using the mirror tool. Then create
+a pink heart on a red background using the shape brush, which will
+automatically fill the heart shape with pink. Enable brush smoothing
+to get a smooth heart shape. Then use the Stamp Hearts spray brush to
+draw heart stamps all around the pink heart, demonstrating an animated
+brush tip. Set the blending mode to luminosity/shine (SAI). Finally,
+set a layer style on the pink hearts to add an inner glow.
 
 ### Pixel
 
 This is the most common brush engine which represents a standard
 pixel-based brush.
 
+Slide: Discuss dabs, strokes, etc.
+
 - General Brush Settings
-- Color Settings
-  - Example: Impressionism Brushes
 
 #### Masked Brush
 
@@ -80,6 +106,7 @@ The masked brush allows us to combine the properties of two brush
 tips, which can be used to create all sorts of unique and interesting
 effects.
 
+- Example: Big texture with egg mask
 - Example: Watercolor Brushes
 
 ### Color Smudge
@@ -117,6 +144,9 @@ the preset or restart Krita.
 To permanently save changes to a preset, click the "Overwrite Brush
 Preset" button in the brush settings.
 
+- Color Settings
+  - Example: Impressionism Brushes
+
 # Layers and Masks
 
 ## Paint Layers
@@ -135,6 +165,17 @@ However, you can't paint directly on a group layer.
 
 Group layers are composited together, which is relevant when using
 blending modes and alpha inheritance.
+
+## Alpha Inheritance
+
+The small "alpha" icon next to a layer's name toggles "alpha
+inheritence". When alpha inheritence is enabled for layer, its content
+is "clipped" to content of the layers below it (within the group).
+
+Example: Create a group layer with two children, one has a circle and
+the other a square. Enable alpha inheritance on the top layer to
+demonstrate. Move the top layer around to demonstrate this is
+non-destructive.
 
 ## Fill Layers
 
@@ -160,6 +201,16 @@ the filter on or off, experiment with different parameters, etc.
 Filter layers apply their effects to the layers underneath them. If
 you want to limit the effects to just some layers, use a group layer.
 
+Example: Convert a red apple into a green apple using the `Gradient
+Map` filter layer.
+
+## Colorize Mask
+
+The colorize mask is a special type of mask that can be used to
+automate coloring in line art.
+
+Example: Color in some pre-existing line-art.
+
 ## Vector Layers
 
 Krita supports editing vector shapes in vector layers.
@@ -173,17 +224,6 @@ Transparency masks are grayscale images where black represents full
 transparency, white represents full opacity, and shades of gray
 represents values in between.
 
-## Alpha Inheritance
-
-The small "alpha" icon next to a layer's name toggles "alpha
-inheritence". When alpha inheritence is enabled for layer, its content
-is "clipped" to content of the layers below it (within the group).
-
-Example: Create a group layer with two children, one has a circle and
-the other a square. Enable alpha inheritance on the top layer to
-demonstrate. Move the top layer around to demonstrate this is
-non-destructive.
-
 # Selections
 
 - Selection tools
@@ -196,6 +236,8 @@ non-destructive.
 - Concentric Ellipse
 - Perspective and Vanishing Point
 - Snap to assistants
+
+Example: Create a box made of bricks
 
 # Resource Management
 
@@ -211,14 +253,20 @@ non-destructive.
 # Tips & Tricks
 
 - Use '/' to toggle between the two most recently used brushes.
+- Resize the brush using shift + drag or '[' and ']'.
 - You can save your color palettes inside a KRA file.
 - Use the "ten brushes" script to add shortcuts for commonly used presets.
 - Use colorize mask to automate coloring line art.
 - *.kra and *.bundle files are actually just Zip archives.
 - Use the mirror tools or the multibrush tool to create symmetric images.
 - Use Wrap Around mode to create tiling images.
+  - Example: Create a tiled pattern using the brush smoothing option.
 - Zoom out and click the cardinal arrows to expand the canvas.
 - Use XNOR blending to get sketches to show up on top of artwork.
+- Shortcuts can be key sequences (easier for one-hand use).
+- Use the LUT Management docker for a live grayscale view.
+- Use the Gradient Map filter to quickly change color schemes.
+- Use "Export Advanced" to export scaled versions of an image.
 
 # Resources and Documentation
 
