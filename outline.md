@@ -1,3 +1,27 @@
+# About Krita
+
+# Open Source
+
+Krita is an open source program. Technically that means the source
+code is freely available under an open license. However, like most
+open source software Krita is largely a community effort driven and
+developed by volunteers. Funding and resources are provided by
+non-profits like the Krita Foundation and KDE.
+
+For users, this means the program is completely free. You can freely
+download and run Krita and even modify it to suit your needs if you
+have programming knowledge. That said, this talk isn't about
+programming and development of Krita (unless someone asks about that
+specifically).
+
+# What is Krita Used For?
+
+Krita is primarily designed for digital painting and drawing. You
+could certainly use it for general image editing, as it shares many
+features with other image editing programs. However, these are never
+going to be as complete or in-depth as dedicated image editing
+software (for example Photoshop).
+
 # User Interface
 
 ## Toolbox
