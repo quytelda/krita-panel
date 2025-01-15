@@ -58,6 +58,8 @@ let me just point out a few important ones:
 
 # Brushes
 
+Slide: Discuss dabs, strokes, etc.
+
 ## Erasing
 
 Users familiar with other painting programs might expect to find both
@@ -96,8 +98,6 @@ set a layer style on the pink hearts to add an inner glow.
 This is the most common brush engine which represents a standard
 pixel-based brush.
 
-Slide: Discuss dabs, strokes, etc.
-
 - General Brush Settings
 
 #### Masked Brush
@@ -126,7 +126,7 @@ a few unique settings:
    dragging a finger through wet paint.
 2. "Dulling" samples the colors under the brush and mixes it with the
    foreground color, but doesn't create a smearing effect.
-   
+
 Note: Sometimes the "Dulling" option may display a warning ("caution,
 pierced brush!"). This indicates the brush tip has a hole or gap that
 could cause unexpected results. In practice, I've never found this to
