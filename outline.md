@@ -195,11 +195,18 @@ blending modes and alpha inheritance.
 The small "alpha" icon next to a layer's name toggles "alpha
 inheritence". When alpha inheritence is enabled for layer, its content
 is "clipped" to content of the layers below it (within the group).
+This means the layer in question will be composited in a way that
+doesn't alter the opacity of the stack below.
 
-Example: Create a group layer with two children, one has a circle and
-the other a square. Enable alpha inheritance on the top layer to
-demonstrate. Move the top layer around to demonstrate this is
-non-destructive.
+Example:
+
+	Create a group layer with two children, one has a circle and
+	the other a square. Enable alpha inheritance on the top layer to
+	demonstrate. Move the top layer around to demonstrate this is
+	non-destructive.
+
+	Next, demonstrate how compositing only considers the layers in the
+	current group by moving the layers outside the group.
 
 ## Fill Layers
 
@@ -210,10 +217,9 @@ single color or a tiled pattern.
 Unlike paint layers, fill layers automatically grow and shrink with
 the image.
 
-Note: Fill layers are more space-efficient than a regular paint layer
-filled with a solid color because they only have one channel.
-
-Example: Generate a fill layer with a pattern fill then resize the canvas.
+Note: Fill layers can be more space-efficient than a regular paint
+layer because they only have one channel and their content is
+generated programmatically.
 
 ## Filter Layers
 
