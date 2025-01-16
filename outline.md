@@ -1,6 +1,6 @@
 # About Krita
 
-# Open Source
+## Open Source
 
 Krita is an open source program. Technically that means the source
 code is freely available under an open license. However, like most
@@ -14,13 +14,27 @@ have programming knowledge. That said, this talk isn't about
 programming and development of Krita (unless someone asks about that
 specifically).
 
-# What is Krita Used For?
+## What is Krita Used For?
 
 Krita is primarily designed for digital painting and drawing. You
 could certainly use it for general image editing, as it shares many
 features with other image editing programs. However, these are never
 going to be as complete or in-depth as dedicated image editing
 software (for example Photoshop).
+
+## Supported Platforms
+
+Krita works on Linux, Windows, and macOS, as well as Android (though
+the Android version is still in beta currently), and several other
+platforms. However, Krita isn't available on iOS as Apple is really
+unfriendly toward this kind of project on mobile.
+
+Note: If you download Krita from the official website, it comes
+packaged with all the required dependancies, so all optional features
+are fully included. If you install from a software repository with a
+more minimal packaging philosophy (some Linux distros), make sure to
+add the optional dependencies if you want them. For example, Arch
+Linux requires python-pyqt5 installed for the python plugins.
 
 # User Interface
 
@@ -66,23 +80,10 @@ Krita configuration options.
 Click on a ruler and drag toward the canvas to create a guide. Remove
 guides by dragging them back.
 
-# Settings and Configuration
-
-Krita has lots of settings, so we won't talk about all of them. But
-let me just point out a few important ones:
-
-- If you're looking to map buttons on your tablet/stylus to specific
-  actions, you'll probably want to take a look at the canvas input
-  settings.
-- If you're doing pixel art, you may find it useful to change the zoom
-  level where the pixel grid appears: `Display -> Canvas Decorations
-  -> Pixel Grid`.
-- Check out the `Python Plugin Manager` if you want to use Python
-  plugins.
-
 # Brushes
 
-Slide: Discuss dabs, strokes, etc.
+- Slide: Discuss dabs, strokes, etc.
+- Slide: Brush Settings
 
 ## Erasing
 
@@ -109,13 +110,20 @@ This flexibility is achieved by having multiple brush engines that
 paint in different ways and can be used to achieve different types of
 specialized effects.
 
-Example: First sketch a heart shape using the mirror tool. Then create
-a pink heart on a red background using the shape brush, which will
-automatically fill the heart shape with pink. Enable brush smoothing
-to get a smooth heart shape. Then use the Stamp Hearts spray brush to
-draw heart stamps all around the pink heart, demonstrating an animated
-brush tip. Set the blending mode to luminosity/shine (SAI). Finally,
-set a layer style on the pink hearts to add an inner glow.
+Example:
+
+	On a red background, first sketch a heart shape using the mirror
+	tool. This demonstrates a pixel brush, which works exactly as
+	described previously.
+
+	Next, enable brush smoothing and create a pink heart on a red
+	background using the shape brush, which automatically fills the
+	heart shape with pink.
+
+	Then use the Stamp Hearts spray brush to draw heart stamps all
+	over the pink heart, demonstrating an animated brush tip. Set the
+	blending mode to luminosity/shine (SAI). Finally, set a layer
+	style on the pink hearts to add an inner glow.
 
 ### Pixel
 
@@ -131,7 +139,8 @@ tips, which can be used to create all sorts of unique and interesting
 effects.
 
 - Example: Big texture with egg mask
-- Example: Watercolor Brushes
+- Example: Watercolor Brushes use the mask brush to simulate dilution
+  of the pigment.
 
 ### Color Smudge
 
@@ -159,6 +168,23 @@ be a problem though.
 Since wet brushes are more complex, there's a lot of nuanced settings,
 and more details can be found at:
 https://docs.krita.org/en/reference_manual/brushes/brush_engines/color_smudge_engine.html
+
+Example:
+
+	Demonstrate the impressionism brush ("Texture Impressionism
+	Wet-Pattern") and explore the settings. The brush paints multiple
+	strokes and scatters them around using the scatter setting. The
+	hue and value variance set to fuzzy dab gives the impression of
+	slight color variation across each mark. The strokes are
+	automatically aligned in the direction we're painting using the
+	drawing angle sensor.
+
+	The brush has a pattern enabled which overlays a canvas texture
+	onto the strokes. However, one nice feature of using the color
+	smudge engine is that it smudges that pattern texture, which
+	prevents it from becoming too harsh and digital. This sort of
+	mirrors a real brush, where the pattern is lost under
+	layers of paint.
 
 ## Brush Settings
 
@@ -231,8 +257,15 @@ the filter on or off, experiment with different parameters, etc.
 Filter layers apply their effects to the layers underneath them. If
 you want to limit the effects to just some layers, use a group layer.
 
-Example: Convert a red apple into a green apple using the `Gradient
-Map` filter layer.
+Example:
+
+	Convert a red apple into a green apple using the `Gradient Map`
+	filter layer. Show how the filter mask only affects layers below
+	it in the group by moving the stem out of the group and the
+	sketch above the filter.
+
+	Demonstrate the LUT management docker by creating a new window and
+	view of the apple then configuring it display the image in grayscale.
 
 ## Colorize Mask
 
@@ -254,20 +287,28 @@ Transparency masks are grayscale images where black represents full
 transparency, white represents full opacity, and shades of gray
 represents values in between.
 
-# Selections
+# Painting Assistants and Selections
 
-- Selection tools
-- Local selections
-- Edit the global selection
+Example:
 
-# Painting Assistants
+	Demonstrate concentric circle to introduce the concept of painting
+	assistants.
 
-- Parallel Ruler
-- Concentric Ellipse
-- Perspective and Vanishing Point
-- Snap to assistants
+	Next, show the more advanced 2-point perspective assistant. Place
+	the horizon and vanishing points high on the canvas so we can draw
+	a cube viewed from above. Point out that holding Shift helps us
+	to draw a perfectly horizontal line; this use of Shift is common
+	for several Krita tools. Draw a cube in perspective.
 
-Example: Create a box made of bricks
+	Open the prepared example file where the cube has been given three
+	brick faces. A "shadow" layer has been prepared with the multiply
+	mode for painting the shadow on each face. Use the polygon
+	selection tool to select the right face of the cube. Use the
+	airbrush to paint a shadow.
+
+	If we want to shade the left face as well, we would need to clear
+	our selection and make a new one. Instead, we can save the
+	selection as a local selection and lock it so we can return to it later.
 
 # Resource Management
 
@@ -276,27 +317,33 @@ Example: Create a box made of bricks
 - Bundles
 - Vector Shapes
 
-# Vector Tools
-
-- Vector Tools
-
 # Tips & Tricks
 
+## Wrap-Around Mode and Multibrush Tool
+
+Example:
+
+	Use wrap around mode with the brush stabilizer to create a basic
+	repeating pattern.
+
+	Clear the pattern and use the multibrush tool to create a
+	tiling and symmetric pattern.
+
+## Other Tips
+
 - Use '/' to toggle between the two most recently used brushes.
+- Use the "ten brushes" script to add shortcuts for commonly used
+  presets.
+- You can use the Canvas Input Settings to map tablet buttons and
+  gestures.
 - Resize the brush using shift + drag or '[' and ']'.
 - You can save your color palettes inside a KRA file.
-- Use the "ten brushes" script to add shortcuts for commonly used presets.
-- Use colorize mask to automate coloring line art.
 - *.kra and *.bundle files are actually just Zip archives.
-- Use the mirror tools or the multibrush tool to create symmetric images.
-- Use Wrap Around mode to create tiling images.
-  - Example: Create a tiled pattern using the brush smoothing option.
 - Zoom out and click the cardinal arrows to expand the canvas.
-- Use XNOR blending to get sketches to show up on top of artwork.
 - Shortcuts can be key sequences (easier for one-hand use).
-- Use the LUT Management docker for a live grayscale view.
-- Use the Gradient Map filter to quickly change color schemes.
 - Use "Export Advanced" to export scaled versions of an image.
+- For working on pixel art, lower the pixel grid zoom threshold.
+- Use XNOR blending to get sketches to show up on top of artwork.
 
 # Resources and Documentation
 
